@@ -15,33 +15,45 @@ function verificar() {
         
         if (fsex[0].checked) {
             gênero = 'Homem'
-            if (idade >=0 && idade < 14) {
+            if (idade >=0 && idade < 2) {
+                // Bebê
+                img.setAttribute('src', 'imagens/menininho.png')
+            } else if (idade < 12) {
                 // Criança
                 img.setAttribute('src', 'imagens/menino.png')
-            } else if (idade < 21) {
+            } else if (idade < 18) {
+                // Adolescente
+                img.setAttribute('src', 'imagens/adolescentem.png')
+            } else if (idade < 29) {
                 // Jovem
-                img.setAttribute('src', 'imagens/rapaz.png')
-            } else if (idade < 60) {
+                img.setAttribute('src', 'imagens/moço.png')
+            } else if (idade < 59) {
                 // Adulto
                 img.setAttribute('src', 'imagens/homem.png')
             } else {
                 // Idoso
-                img.setAttribute('src', 'imagens/senhor.png')
+                img.setAttribute('src', 'imagens/idoso.png')
             }
         } else if (fsex[1].checked) {
             gênero = 'Mulher'
-            if (idade >=0 && idade < 14) {
+            if (idade >=0 && idade < 2) {
+                // Bebê
+                img.setAttribute('src', 'imagens/menininha.png')
+            } else if (idade < 12) {
                 // Criança
                 img.setAttribute('src', 'imagens/menina.png')
-            } else if (idade < 21) {
-                // Jovem
+            } else if (idade < 18) {
+                // Adolescente
+                img.setAttribute('src', 'imagens/adolescentef.png')
+            } else if (idade < 29) {
+                //Jovem
                 img.setAttribute('src', 'imagens/moça.png')
-            } else if (idade < 60) {
+            } else if (idade < 59) {
                 // Adulto
                 img.setAttribute('src', 'imagens/mulher.png')
             } else {
                 // Idoso
-                img.setAttribute('src', 'imagens/senhora.png')
+                img.setAttribute('src', 'imagens/idosa.png')
             }
         }
         res.innerHTML = `Detectamos ${gênero} com ${idade} anos.`
